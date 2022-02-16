@@ -1,0 +1,372 @@
+:root {
+    --red: rgba(183, 18, 52, 1);
+    --yellow: rgba(255, 213, 0, 1);
+    --orange: rgba(255, 88, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+    --blue: rgba(0, 70, 173, 1);
+    --green: rgba(0, 155, 72, 1);
+}
+
+/* -------------------- 6 Planes transforms -------------------- */
+
+li:nth-child(1) {
+    transform: rotateY(0deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* right */
+li:nth-child(2) {
+    transform: rotateY(90deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* back */
+li:nth-child(3) {
+    transform: rotateY(180deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* left */
+li:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* top */
+li:nth-child(5) {
+    transform: rotateX(90deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* bottom */
+li:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(calc(var(--block-size) / 2));
+}
+
+/* -------------------- Planes front blocks -------------------- */
+
+/* Planes left-top-front */
+
+/* front */
+ul:nth-child(1) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* left */
+ul:nth-child(1) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* top */
+ul:nth-child(1) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes middle-top-front */
+
+/* front */
+ul:nth-child(2) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* top */
+ul:nth-child(2) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes right-top-front */
+
+/* front */
+ul:nth-child(3) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* right */
+ul:nth-child(3) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* top */
+ul:nth-child(3) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes left-middle-front */
+
+/* front */
+ul:nth-child(4) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* left */
+ul:nth-child(4) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* Planes middle-middle-front */
+
+/* front */
+ul:nth-child(5) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* Planes right-middle-front */
+
+/* front */
+ul:nth-child(6) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* right */
+ul:nth-child(6) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* Planes left-bottom-front */
+
+/* front */
+ul:nth-child(7) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* left */
+ul:nth-child(7) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* bottom */
+ul:nth-child(7) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes middle-bottom-front */
+
+/* front */
+ul:nth-child(8) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* bottom */
+ul:nth-child(8) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes right-bottom-front */
+
+/* front */
+ul:nth-child(9) li:nth-child(1) {
+    background-color: var(--red);
+}
+
+/* right */
+ul:nth-child(9) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* bottom */
+ul:nth-child(9) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* -------------------- Planes middle blocks -------------------- */
+
+/* Planes left-top-middle */
+
+/* left */
+ul:nth-child(10) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* top */
+ul:nth-child(10) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* bottom */
+ul:nth-child(10) li:nth-child(6) {
+    /* background-color: var(--green); */
+}
+
+/* Planes middle-top-middle */
+
+/* top */
+ul:nth-child(11) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes right-top-middle */
+
+/* right */
+ul:nth-child(12) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* top */
+ul:nth-child(12) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes left-middle-middle */
+
+/* left */
+ul:nth-child(13) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* Planes right-middle-middle */
+
+/* right */
+ul:nth-child(14) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* Planes left-bottom-middle */
+
+/* left */
+ul:nth-child(15) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* bottom */
+ul:nth-child(15) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes middle-bottom-middle */
+
+/* bottom */
+ul:nth-child(16) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes right-bottom-middle */
+
+/* right */
+ul:nth-child(17) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* bottom */
+ul:nth-child(17) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* -------------------- Planes back blacks -------------------- */
+
+/* Planes left-top-back */
+
+/* back */
+ul:nth-child(18) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* left */
+ul:nth-child(18) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* top */
+ul:nth-child(18) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes middle-top-back */
+
+/* back */
+ul:nth-child(19) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* top */
+ul:nth-child(19) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes right-top-back */
+
+/* right */
+ul:nth-child(20) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* back */
+ul:nth-child(20) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* top */
+ul:nth-child(20) li:nth-child(5) {
+    background-color: var(--blue);
+}
+
+/* Planes left-middle-back */
+
+/* back */
+ul:nth-child(21) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* left */
+ul:nth-child(21) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* Planes middle-middle-back */
+
+/* back */
+ul:nth-child(22) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* Planes right-middle-back */
+
+/* right */
+ul:nth-child(23) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* back */
+ul:nth-child(23) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* Planes left-bottom-back */
+
+/* back */
+ul:nth-child(24) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* left */
+ul:nth-child(24) li:nth-child(4) {
+    background-color: var(--white);
+}
+
+/* bottom */
+ul:nth-child(24) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes middle-bottom-back */
+
+/* back */
+ul:nth-child(25) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* bottom */
+ul:nth-child(25) li:nth-child(6) {
+    background-color: var(--green);
+}
+
+/* Planes right-bottom-back */
+
+/* right */
+ul:nth-child(26) li:nth-child(2) {
+    background-color: var(--yellow);
+}
+
+/* back */
+ul:nth-child(26) li:nth-child(3) {
+    background-color: var(--orange);
+}
+
+/* bottom */
+ul:nth-child(26) li:nth-child(6) {
+    background-color: var(--green);
+}

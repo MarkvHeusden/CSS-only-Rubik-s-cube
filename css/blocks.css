@@ -1,0 +1,242 @@
+:root {
+    /* Transforms X */
+    --x-left: translateX(var(--block-size-neg));
+    --x-middle: translateX(0);
+    --x-right: translateX(var(--block-size));
+
+    /* Transforms Y */
+    --y-top: translateY(var(--block-size-neg));
+    --y-middle: translateY(0);
+    --y-bottom: translateY(var(--block-size));
+
+    /* Transforms Z */
+    --z-front: translateZ(var(--block-size));
+    --z-middle: translateZ(0);
+    --z-back: translateZ(var(--block-size-neg));
+
+    /* Rotate X */
+    --rotate-x-pos: rotateX(90deg);
+    --rotate-x-none: rotateX(0);
+    --rotate-x-neg: rotateX(-90deg);
+
+    /* Rotate Y */
+    --rotate-y-pos: rotateY(90deg);
+    --rotate-y-none: rotateY(0);
+    --rotate-y-neg: rotateY(-90deg);
+
+    /* Rotate Z */
+    --rotate-z-pos: rotateZ(90deg);
+    --rotate-z-none: rotateZ(0);
+    --rotate-z-neg: rotateZ(-90deg);
+}
+
+/* -------------------- 26 Blocks -------------------- */
+
+/* Front-side (9 blocks) */
+ul:nth-child(1) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-top) var(--z-front);
+}
+
+ul:nth-child(2) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-top)
+        var(--z-front);
+}
+
+ul:nth-child(3) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-top)
+        var(--z-front);
+}
+
+ul:nth-child(4) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-middle)
+        var(--z-front);
+}
+
+ul:nth-child(5) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-middle)
+        var(--z-front);
+}
+
+ul:nth-child(6) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-middle)
+        var(--z-front);
+}
+
+ul:nth-child(7) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-bottom)
+        var(--z-front);
+}
+
+ul:nth-child(8) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-bottom)
+        var(--z-front);
+}
+
+ul:nth-child(9) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-bottom)
+        var(--z-front);
+}
+
+/* Middle-side (8 blocks) */
+ul:nth-child(10) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-top)
+        var(--z-middle);
+}
+
+ul:nth-child(11) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-top)
+        var(--z-middle);
+}
+
+ul:nth-child(12) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-top)
+        var(--z-middle);
+}
+
+ul:nth-child(13) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-middle)
+        var(--z-middle);
+}
+
+ul:nth-child(14) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-middle)
+        var(--z-middle);
+}
+
+ul:nth-child(15) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-bottom)
+        var(--z-middle);
+}
+
+ul:nth-child(16) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-bottom)
+        var(--z-middle);
+}
+
+ul:nth-child(17) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-bottom)
+        var(--z-middle);
+}
+
+/* Back-side (9 blocks) */
+ul:nth-child(18) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-top) var(--z-back);
+}
+
+ul:nth-child(19) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-top)
+        var(--z-back);
+}
+
+ul:nth-child(20) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-top) var(--z-back);
+}
+
+ul:nth-child(21) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-middle)
+        var(--z-back);
+}
+
+ul:nth-child(22) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-middle)
+        var(--z-back);
+}
+
+ul:nth-child(23) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-middle)
+        var(--z-back);
+}
+
+ul:nth-child(24) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-left) var(--y-bottom)
+        var(--z-back);
+}
+
+ul:nth-child(25) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-middle) var(--y-bottom)
+        var(--z-back);
+}
+
+ul:nth-child(26) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-none) var(--x-right) var(--y-bottom)
+        var(--z-back);
+}
+
+/* -------------------- Animations -------------------- */
+main:hover ul:nth-child(1) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-left) var(--y-top) var(--z-front);
+}
+
+main:hover ul:nth-child(2) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-middle) var(--y-top)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(3) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-right) var(--y-top) var(--z-front);
+}
+
+main:hover ul:nth-child(4) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-left) var(--y-middle)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(5) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-middle) var(--y-middle)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(6) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-right) var(--y-middle)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(7) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-left) var(--y-bottom)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(8) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-middle) var(--y-bottom)
+        var(--z-front);
+}
+
+main:hover ul:nth-child(9) {
+    transform: var(--rotate-x-none) var(--rotate-y-none)
+        var(--rotate-z-neg) var(--x-right) var(--y-bottom)
+        var(--z-front);
+}
