@@ -19,8 +19,8 @@ html {
     height: 100vh;
     background-image: radial-gradient(
         closest-side circle,
-        grey 20%,
-        black 70%
+        rgba(0, 0, 0, 0.7) 15%,
+        black 80%
     );
     background-position: center;
 }
@@ -62,12 +62,12 @@ main ul li {
     width: var(--block-size);
     height: var(--block-size);
     background-color: black;
-    border: 4px solid black;
+    border: calc(var(--block-size) / 20) solid black;
     position: absolute;
-    border-radius: 0.5em;
+    border-radius: calc(var(--block-size) / 10);
 }
 
-@keyframes spin {
+/* @keyframes spin {
     0% {
         transform: rotateX(0deg) rotateY(0deg);
     }
@@ -95,13 +95,13 @@ main ul li {
     100% {
         transform: rotateX(0deg) rotateY(0deg);
     }
-}
-/* 
+} */
+
 @keyframes spin {
     0% {
-        transform: rotateX(0deg) rotateY(0deg);
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
     100% {
-        transform: rotateX(360deg) rotateY(360deg);
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(-360deg);
     }
-} */
+}
