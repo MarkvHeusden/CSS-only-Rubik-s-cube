@@ -177,11 +177,6 @@ ul:nth-child(10) li:nth-child(5) {
     background-color: var(--blue);
 }
 
-/* bottom */
-ul:nth-child(10) li:nth-child(6) {
-    /* background-color: var(--green); */
-}
-
 /* Planes middle-top-middle */
 
 /* top */
