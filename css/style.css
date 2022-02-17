@@ -3,6 +3,7 @@
     --cube-size: 15rem;
     --block-size: calc(var(--cube-size) / 3);
     --block-size-neg: calc(var(--block-size) * -1);
+    --radius: 97%;
 }
 
 *,
@@ -11,6 +12,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h2 {
+    margin: 1em 0;
 }
 
 body {
@@ -23,13 +28,15 @@ body {
         black 80%
     );
     background-position: center;
+    font-family: sans-serif;
+    color: white;
 }
 
 main {
     perspective: 35rem;
     width: var(--cube-size);
     height: var(--cube-size);
-    transform: rotateZ(90deg);
+    transform: rotateZ(-90deg);
 }
 
 /* ---------- Cube Styling ---------- */
@@ -63,17 +70,28 @@ section ul li {
     background-color: black;
     border: calc(var(--block-size) / 20) solid black;
     position: absolute;
-    /* border-radius: calc(var(--block-size) / 20); */
+    background-image: radial-gradient(
+        transparent var(--radius),
+        black var(--radius)
+    );
 }
 
 nav {
-    width: calc(var(--cube-size) * 1.5);
+    width: calc(var(--cube-size) + 4rem);
+    /* width: var(--cube-size); */
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+    /* background-color: black; */
+    padding: 2rem;
+}
+
+nav div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0.5rem;
-    position: absolute;
-    top: 10vh;
 }
 
 label {
@@ -85,12 +103,22 @@ label {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     font-family: sans-serif;
 }
 
-label:hover {
-    background-color: black;
+/* nav div:first-of-type */
+
+label[for*='side']:hover,
+label[for*='camera']:hover,
+input:nth-of-type(1):checked ~ nav div:first-of-type label:nth-of-type(1),
+input:nth-of-type(2):checked ~ nav div:first-of-type label:nth-of-type(2),
+input:nth-of-type(3):checked ~ nav div:first-of-type label:nth-of-type(3),
+input:nth-of-type(4):checked ~ nav div:first-of-type label:nth-of-type(4),
+input:nth-of-type(5):checked ~ nav div:nth-of-type(2) label:nth-of-type(1),
+input:nth-of-type(6):checked {
+    background-color: white;
+    color: black;
 }
 
 input {
@@ -99,57 +127,62 @@ input {
     width: 0;
 }
 
-input[name='camera']:nth-of-type(1):checked ~ main section {
-    transform: rotateY(30deg) rotateX(45deg);
-}
+/* ---------- Camera's top ---------- */
 
-input[name='camera']:nth-of-type(2):checked ~ main section {
-    transform: rotateY(30deg) rotateX(225deg);
-}
-
-input[name='camera']:nth-of-type(3):checked ~ main section {
+input:nth-of-type(1):checked
+    ~ input:nth-of-type(5):checked
+    ~ main
+    section {
     transform: rotateY(-30deg) rotateX(45deg);
 }
 
-input[name='camera']:nth-of-type(4):checked ~ main section {
+input:nth-of-type(2):checked
+    ~ input:nth-of-type(5):checked
+    ~ main
+    section {
+    transform: rotateY(-30deg) rotateX(135deg);
+}
+
+input:nth-of-type(3):checked
+    ~ input:nth-of-type(5):checked
+    ~ main
+    section {
     transform: rotateY(-30deg) rotateX(225deg);
 }
 
-/* @keyframes spin {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    12.5% {
-        transform: rotateX(-20deg) rotateY(15deg);
-    }
-    25% {
-        transform: rotateX(0deg) rotateY(30deg);
-    }
-    37.5% {
-        transform: rotateX(20deg) rotateY(15deg);
-    }
-    50% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    62.5% {
-        transform: rotateX(-20deg) rotateY(-15deg);
-    }
-    75% {
-        transform: rotateX(0deg) rotateY(-30deg);
-    }
-    87.5% {
-        transform: rotateX(20deg) rotateY(-15deg);
-    }
-    100% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-} */
+input:nth-of-type(4):checked
+    ~ input:nth-of-type(5):checked
+    ~ main
+    section {
+    transform: rotateY(-30deg) rotateX(315deg);
+}
 
-/* @keyframes spin {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    100% {
-        transform: rotateX(360deg) rotateY(360deg);
-    }
-} */
+/* ---------- Camera's bottom ---------- */
+
+input:nth-of-type(1):checked
+    ~ input:nth-of-type(6):checked
+    ~ main
+    section {
+    transform: rotateY(30deg) rotateX(45deg);
+}
+
+input:nth-of-type(2):checked
+    ~ input:nth-of-type(6):checked
+    ~ main
+    section {
+    transform: rotateY(30deg) rotateX(135deg);
+}
+
+input:nth-of-type(3):checked
+    ~ input:nth-of-type(6):checked
+    ~ main
+    section {
+    transform: rotateY(30deg) rotateX(225deg);
+}
+
+input:nth-of-type(4):checked
+    ~ input:nth-of-type(6):checked
+    ~ main
+    section {
+    transform: rotateY(30deg) rotateX(315deg);
+}
