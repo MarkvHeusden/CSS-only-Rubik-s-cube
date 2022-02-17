@@ -189,53 +189,53 @@ ul:nth-child(26) {
 }
 
 /* -------------------- Animations -------------------- */
-body:hover ul:nth-child(1) {
+main:hover ul:nth-child(1) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-left) var(--y-top) var(--z-front);
 }
 
-body:hover ul:nth-child(2) {
+main:hover ul:nth-child(2) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-middle) var(--y-top)
         var(--z-front);
 }
 
-body:hover ul:nth-child(3) {
+main:hover ul:nth-child(3) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-right) var(--y-top) var(--z-front);
 }
 
-body:hover ul:nth-child(4) {
+main:hover ul:nth-child(4) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-left) var(--y-middle)
         var(--z-front);
 }
 
-body:hover ul:nth-child(5) {
+main:hover ul:nth-child(5) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-middle) var(--y-middle)
         var(--z-front);
 }
 
-body:hover ul:nth-child(6) {
+main:hover ul:nth-child(6) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-right) var(--y-middle)
         var(--z-front);
 }
 
-body:hover ul:nth-child(7) {
+main:hover ul:nth-child(7) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-left) var(--y-bottom)
         var(--z-front);
 }
 
-body:hover ul:nth-child(8) {
+main:hover ul:nth-child(8) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-middle) var(--y-bottom)
         var(--z-front);
 }
 
-body:hover ul:nth-child(9) {
+main:hover ul:nth-child(9) {
     transform: var(--rotate-x-none) var(--rotate-y-none)
         var(--rotate-z-neg) var(--x-right) var(--y-bottom)
         var(--z-front);
