@@ -1,9 +1,17 @@
-/* Generic styles */
+/*-------------------- Generic styles -------------------- */
 :root {
-    --cube-size: 15rem;
+    --cube-size: 30vmin;
     --block-size: calc(var(--cube-size) / 3);
-    --block-size-neg: calc(var(--block-size) * -1);
+    --block-size-n: calc(var(--block-size) * -1);
     --radius: 97%;
+
+    --red: #b71234;
+    --yellow: #ffd500;
+    --orange: #ff5800;
+    --white: #ffffff;
+    --blue: #0046ad;
+    --green: #009b48;
+    --black: #000;
 }
 
 *,
@@ -14,10 +22,6 @@
     box-sizing: border-box;
 }
 
-h2 {
-    margin: 1em 0 0.5em;
-}
-
 body {
     display: grid;
     place-items: center;
@@ -25,12 +29,14 @@ body {
     background-image: radial-gradient(
         closest-side circle,
         rgb(0 0 0 / 0.7) 15%,
-        var(--border) 80%
+        var(--black) 80%
     );
     background-position: center;
     font-family: sans-serif;
     color: white;
 }
+
+/* -------------------- Cube Styling -------------------- */
 
 main {
     perspective: 35rem;
@@ -38,8 +44,6 @@ main {
     height: var(--cube-size);
     transform: rotateZ(-90deg);
 }
-
-/* ---------- Cube Styling ---------- */
 
 section {
     width: 100%;
@@ -49,7 +53,6 @@ section {
     transition: transform 1s;
     display: grid;
     place-items: center;
-    /* animation: spin 15s infinite linear; */
 }
 
 /* 26 blocks */
@@ -60,7 +63,6 @@ section ul {
     width: var(--block-size);
     height: var(--block-size);
     transition: transform 0.5s;
-    /* transform: rotate(0); */
     transform: rotateX(var(--rotate-x, 0deg))
         rotateY(var(--rotate-y, 0deg)) rotateZ(var(--rotate-z, 0deg))
         translateX(var(--translate-x, 0))
@@ -72,26 +74,25 @@ section ul {
 section ul li {
     width: var(--block-size);
     height: var(--block-size);
-    background-color: var(--border);
-    border: calc(var(--block-size) / 20) solid var(--border);
+    background-color: var(--black);
+    border: calc(var(--block-size) / 20) solid var(--black);
     position: absolute;
     background-image: radial-gradient(
         transparent var(--radius),
-        var(--border) var(--radius)
+        var(--black) var(--radius)
     );
     transform: rotateX(var(--rotate-x, 0deg))
         rotateY(var(--rotate-y, 0deg))
         translateZ(calc(var(--block-size) / 2));
 }
 
+/* -------------------- Camera inputs -------------------- */
+
 nav {
-    width: calc(var(--cube-size) + 4rem);
-    /* width: var(--cube-size); */
+    width: 17rem;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    inset: 1rem 1rem auto auto;
     z-index: 1;
-    /* background-color: var(--border); */
     padding: 2rem;
 }
 
@@ -100,6 +101,10 @@ nav div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0.5rem;
+}
+
+p {
+    margin: 1em 0 0.5em;
 }
 
 label {
@@ -113,9 +118,8 @@ label {
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
     font-family: sans-serif;
+    border-radius: 0.2rem;
 }
-
-/* nav div:first-of-type */
 
 label:hover,
 input:nth-of-type(1):checked
@@ -143,7 +147,7 @@ input:nth-of-type(6):checked
     div:nth-of-type(2)
     label:nth-of-type(2) {
     background-color: #fff;
-    color: var(--border);
+    color: var(--black);
 }
 
 input {
@@ -152,7 +156,7 @@ input {
     width: 0;
 }
 
-/* ---------- Camera's top ---------- */
+/* -------------------- Camera angles top -------------------- */
 
 input:nth-of-type(1):checked
     ~ input:nth-of-type(5):checked
@@ -182,7 +186,7 @@ input:nth-of-type(4):checked
     transform: rotateY(-30deg) rotateX(315deg);
 }
 
-/* ---------- Camera's bottom ---------- */
+/* -------------------- Camera angles bottom -------------------- */
 
 input:nth-of-type(1):checked
     ~ input:nth-of-type(6):checked
