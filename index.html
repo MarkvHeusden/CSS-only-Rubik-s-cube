@@ -7,8 +7,6 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <link rel="stylesheet" href="css/planes.css" />
-        <link rel="stylesheet" href="css/blocks.css" />
         <link rel="stylesheet" href="css/style.css" />
         <title>Rubik's cube</title>
     </head>
@@ -25,18 +23,19 @@
         />
         <input type="radio" name="camera-height" id="camera-bottom" />
         <nav>
+            <input type="checkbox" name="toggle-menu" />
             <p>Side view</p>
-            <div>
-                <label for="side-1">1</label>
-                <label for="side-2">2</label>
-                <label for="side-3">3</label>
-                <label for="side-4">4</label>
-            </div>
+            <ol>
+                <li><label for="side-1">1</label></li>
+                <li><label for="side-2">2</label></li>
+                <li><label for="side-3">3</label></li>
+                <li><label for="side-4">4</label></li>
+            </ol>
             <p>Top view</p>
-            <div>
-                <label for="camera-top">Top</label>
-                <label for="camera-bottom">Bottom</label>
-            </div>
+            <ol>
+                <li><label for="camera-top">Top</label></li>
+                <li><label for="camera-bottom">Bottom</label></li>
+            </ol>
         </nav>
         <main>
             <section>
