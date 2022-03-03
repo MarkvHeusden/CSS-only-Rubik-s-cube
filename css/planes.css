@@ -1,3 +1,18 @@
+section ul li {
+    width: var(--block-size);
+    height: var(--block-size);
+    background-color: var(--black);
+    border: calc(var(--block-size) / 20) solid var(--black);
+    position: absolute;
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    transform: rotateX(var(--rotate-x, 0deg))
+        rotateY(var(--rotate-y, 0deg))
+        translateZ(calc(var(--block-size) / 2));
+}
+
 /* -------------------- Transform each plane to make a box -------------------- */
 
 /* right */

@@ -1,3 +1,17 @@
+section ul {
+    list-style-type: none;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: var(--block-size);
+    height: var(--block-size);
+    transition: transform 0.5s;
+    transform: rotateX(var(--rotate-x, 0deg))
+        rotateY(var(--rotate-y, 0deg)) rotateZ(var(--rotate-z, 0deg))
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        translateZ(var(--translate-z, 0));
+}
+
 /* -------------------- Front-side (9 blocks) -------------------- */
 ul:nth-child(1) {
     --translate-x: var(--block-size-n);
