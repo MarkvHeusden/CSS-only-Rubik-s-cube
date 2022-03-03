@@ -4,10 +4,21 @@ section ul li {
     background-color: var(--black);
     border: calc(var(--block-size) / 20) solid var(--black);
     position: absolute;
+    background-position: center;
     background-image: radial-gradient(
-        transparent var(--radius),
+        var(--color, var(--black)) var(--radius),
         var(--black) var(--radius)
     );
+    /* --border: 5px;
+    background-image: repeating-linear-gradient(
+        blue 0 var(--border),
+        red var(--border) calc(var(--block-size) - var(--border))
+    ); */
+
+    /* --g: transparent 0 calc(var(--block-size) - 5px),
+        #fff 0 var(--block-size);
+    background: repeating-linear-gradient(to right, var(--g)),
+        repeating-linear-gradient(to bottom, var(--g)) red; */
     transform: rotateX(var(--rotate-x, 0deg))
         rotateY(var(--rotate-y, 0deg))
         translateZ(calc(var(--block-size) / 2));
@@ -44,24 +55,24 @@ li:nth-child(6) {
 
 /* Red side */
 ul:nth-child(-n + 9) li:nth-child(1) {
-    background-color: var(--red);
+    --color: var(--red);
 }
 
 /* Yellow side */
 ul:nth-child(3n + 14) li:nth-child(2),
 ul:nth-child(-3n + 18) li:nth-child(2) {
-    background-color: var(--yellow);
+    --color: var(--yellow);
 }
 
 /* Orange side */
 ul:nth-child(n + 18) li:nth-child(3) {
-    background-color: var(--orange);
+    --color: var(--orange);
 }
 
 /* White side */
 ul:nth-child(3n + 15) li:nth-child(4),
 ul:nth-child(-3n + 16) li:nth-child(4) {
-    background-color: var(--white);
+    --color: var(--white);
 }
 
 /* Blue side */
@@ -74,7 +85,7 @@ ul:nth-child(12) li:nth-child(5),
 ul:nth-child(18) li:nth-child(5),
 ul:nth-child(19) li:nth-child(5),
 ul:nth-child(20) li:nth-child(5) {
-    background-color: var(--blue);
+    --color: var(--blue);
 }
 
 /* Green side */
@@ -87,5 +98,5 @@ ul:nth-child(17) li:nth-child(6),
 ul:nth-child(24) li:nth-child(6),
 ul:nth-child(25) li:nth-child(6),
 ul:nth-child(26) li:nth-child(6) {
-    background-color: var(--green);
+    --color: var(--green);
 }
