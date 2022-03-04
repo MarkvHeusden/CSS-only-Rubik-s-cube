@@ -27,8 +27,8 @@ Ik week 3 kreeg ik corona en kon ik minder doen dan verwacht helaas. Wat ik wel 
 ```css
 /* Yellow side */
 ul:nth-child(3n + 14) li:nth-child(2),
-ul:nth-child(-3n + 18) li:nth-child(2) {
-    background-color: var(--yellow);
+ul:nth-child(-3n + 12) li:nth-child(2) {
+    --color: var(--yellow);
 }
 ```
 
