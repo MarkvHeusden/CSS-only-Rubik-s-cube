@@ -170,41 +170,45 @@ input:nth-of-type(4):checked
 /* -------------------- Psycho mode -------------------- */
 
 input[name='switch-colors']:last-of-type:checked ~ main li {
-    /* background-image: repeating-radial-gradient(
-        closest-side circle,
-        #fff calc(100% - var(--ring-size) * 3)
-            calc(100% - var(--ring-size) * 2),
-        #000 calc(100% - var(--ring-size) * 2)
-            calc(100% - var(--ring-size)),
-        var(--color) calc(100% - var(--ring-size)) 100%
-    ); */
+    /* Change colors to rgb values to add an alpha value in the gradient */
+    --red: 183 18 52;
+    --yellow: 255 213 0;
+    --orange: 255 88 0;
+    --white: 255 255 255;
+    --blue: 0 70 173;
+    --green: 0 155 72;
+
+    /* border-image: repeating-radial-gradient(
+            #000 calc(100% - var(--ring-size) * 1.5)
+                calc(100% - var(--ring-size) * 1.25),
+            #666 calc(100% - var(--ring-size) * 1.25)
+                calc(100% - var(--ring-size))
+        )
+        1; */
+    /* --angle: 0deg; */
+    /* border-image: linear-gradient(
+            var(--angle),
+            red,
+            yellow,
+            lime,
+            aqua,
+            blue,
+            magenta
+        )
+        1; */
+
+    /* border-image-width: 5px; */
+    --ring-size: 0.6rem;
+
     background-image: repeating-radial-gradient(
         closest-side circle,
-        #000 calc(100% - var(--ring-size) * 2)
-            calc(100% - var(--ring-size)),
-        var(--color) calc(100% - var(--ring-size)) 100%
+        rgb(var(--color)) calc(100% - var(--ring-size) * 2),
+        rgb(var(--color) / 0.4) calc(100% - var(--ring-size))
     );
-    /* --red: blue; */
-    /* --yellow: #ffd500;
-    --orange: #ff5800;
-    --white: #fff;
-    --blue: #0046ad;
-    --green: #009b48;
-    --black: #000; */
-    --ring-size: 0.2rem;
-    --eye-speed: 0.2s;
-    animation: grow var(--eye-speed) linear infinite;
+
+    animation: grow 1.2s linear infinite, rotate 10s linear infinite;
 }
 
-/* @keyframes grow {
-    0% {
-        background-size: 100% 100%;
-    }
-    100% {
-        background-size: calc(100% + var(--ring-size) * 6)
-            calc(100% + var(--ring-size) * 6);
-    }
-} */
 @keyframes grow {
     0% {
         background-size: 100% 100%;

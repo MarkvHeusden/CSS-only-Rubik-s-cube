@@ -6,7 +6,7 @@ section ul li {
     position: absolute;
     background-position: center;
     background-image: radial-gradient(
-        var(--color, var(--black)) var(--radius),
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
     /* --border: 5px;
@@ -60,7 +60,7 @@ ul:nth-child(-n + 9) li:nth-child(1) {
 
 /* Yellow side */
 ul:nth-child(3n + 14) li:nth-child(2),
-ul:nth-child(-3n + 18) li:nth-child(2) {
+ul:nth-child(-3n + 12) li:nth-child(2) {
     --color: var(--yellow);
 }
 
@@ -70,8 +70,8 @@ ul:nth-child(n + 18) li:nth-child(3) {
 }
 
 /* White side */
-ul:nth-child(3n + 15) li:nth-child(4),
-ul:nth-child(-3n + 16) li:nth-child(4) {
+ul:nth-child(-3n + 13) li:nth-child(4),
+ul:nth-child(3n + 15) li:nth-child(4) {
     --color: var(--white);
 }
 
