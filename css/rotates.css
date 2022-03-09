@@ -1,6 +1,6 @@
 /* -------------------- Menu left -------------------- */
 nav:last-of-type {
-    inset: 1rem auto auto 1rem;
+    inset: 2rem auto auto 2rem;
 }
 
 input[name='rotate-menu']::after {
@@ -10,65 +10,138 @@ input[name='rotate-menu']::after {
 
 input[name='rotate-menu'] ~ p,
 input[name='rotate-menu'] ~ ol {
-    transform: translateX(-17rem);
+    transform: translateX(-20rem);
+    opacity: 0;
 }
 
-/* -------------------- Camera angles top -------------------- */
+/* -------------------- Rotations left -------------------- */
 
-/* input:nth-of-type(1):checked
-    ~ input:nth-of-type(5):checked
+/* Red side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(11):checked
     ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(45deg);
+    ul:nth-child(-n + 9) {
+    --rotate-z: -90deg;
 }
 
-input:nth-of-type(2):checked
-    ~ input:nth-of-type(5):checked
+/* Green side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
     ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(135deg);
+    ul:nth-child(7),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(8),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(9),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(15),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(16),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(17),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(24),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(25),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(12):checked
+    ~ main
+    ul:nth-child(26) {
+    --rotate-y: -90deg;
 }
 
-input:nth-of-type(3):checked
-    ~ input:nth-of-type(5):checked
+/* Orange side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(13):checked
     ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(225deg);
+    ul:nth-child(n + 18) {
+    --rotate-z: 90deg;
 }
 
-input:nth-of-type(4):checked
-    ~ input:nth-of-type(5):checked
+/* Blue side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
     ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(315deg);
-} */
-
-/* -------------------- Camera angles bottom -------------------- */
-
-/* input:nth-of-type(1):checked
-    ~ input:nth-of-type(6):checked
+    ul:nth-child(1),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
     ~ main
-    section {
-    transform: rotateY(30deg) rotateX(45deg);
+    ul:nth-child(2),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(3),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(10),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(11),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(12),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(18),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(19),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(14):checked
+    ~ main
+    ul:nth-child(20) {
+    --rotate-y: 90deg;
 }
 
-input:nth-of-type(2):checked
-    ~ input:nth-of-type(6):checked
+/* Yellow side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(15):checked
     ~ main
-    section {
-    transform: rotateY(30deg) rotateX(135deg);
+    ul:nth-child(3n + 14),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(15):checked
+    ~ main
+    ul:nth-child(-3n + 12) {
+    --rotate-x: -90deg;
 }
 
-input:nth-of-type(3):checked
-    ~ input:nth-of-type(6):checked
+/* White side */
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(16):checked
     ~ main
-    section {
-    transform: rotateY(30deg) rotateX(225deg);
+    ul:nth-child(-3n + 13),
+input:nth-of-type(9):checked
+    ~ input:nth-of-type(16):checked
+    ~ main
+    ul:nth-child(3n + 15) {
+    --rotate-x: 90deg;
 }
 
-input:nth-of-type(4):checked
-    ~ input:nth-of-type(6):checked
+/* -------------------- Rotations right -------------------- */
+
+/* Red side */
+/* input:nth-of-type(10):checked
+    ~ input:nth-of-type(11):checked
     ~ main
-    section {
-    transform: rotateY(30deg) rotateX(315deg);
+    ul:nth-child(-n + 9) {
+    --rotate-z: 90deg;
 } */

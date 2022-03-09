@@ -4,16 +4,17 @@ nav {
     width: 18rem;
     position: absolute;
     z-index: 1;
-    padding: 2rem;
 }
 
 nav ol {
+    background-color: #00000080;
     list-style-type: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0.5rem;
-    transition: transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    padding: 0 1rem 1rem;
 }
 
 ol li {
@@ -34,13 +35,18 @@ label {
     font-family: sans-serif;
     border-radius: 0.2rem;
     display: block;
+    z-index: 1;
+    /* pointer-events: all; */
 }
 
 p {
-    margin: 1.5em 0 0.5em;
+    background-color: #00000080;
+    padding: 1.5em 1rem 0.5rem;
     font-weight: bold;
-    transition: transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
     text-shadow: 0 0 5px rgb(0 0 0 / 35%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* -------------------- Inputs styling -------------------- */
@@ -52,6 +58,7 @@ input[type='radio'] {
 }
 
 input[type='checkbox'] {
+    margin: 1rem;
     position: relative;
     display: block;
     width: 3rem;
@@ -92,6 +99,7 @@ input[type='checkbox']:checked {
 input[type='checkbox']:checked ~ p,
 input[type='checkbox']:checked ~ ol {
     transform: translateX(0);
+    opacity: 1;
 }
 
 /* -------------------- Active & hover states labels -------------------- */
@@ -115,4 +123,23 @@ input:nth-of-type(15):checked ~ nav label[for='rotate-yellow'],
 input:nth-of-type(16):checked ~ nav label[for='rotate-white'] {
     background-color: var(--white);
     color: var(--black);
+}
+
+@media only screen and (max-width: 30rem) {
+    body nav:first-of-type {
+        inset: 1rem 1rem auto auto;
+    }
+    body nav:last-of-type {
+        inset: 1rem auto auto 1rem;
+    }
+    nav {
+        width: 12rem;
+    }
+    nav ol {
+        grid-template-columns: 1fr;
+    }
+
+    p {
+        padding: 0 1rem 0.5rem;
+    }
 }

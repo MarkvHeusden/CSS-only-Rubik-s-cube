@@ -4,13 +4,10 @@ section ul li {
     background-color: var(--black);
     border: calc(var(--block-size) / 20) solid var(--black);
     position: absolute;
+    background-color: var(--color, var(--black));
     background-position: center;
-    background-image: radial-gradient(
-        var(--color) var(--radius),
-        var(--black) var(--radius)
-    );
-    transform: rotateX(var(--rotate-x, 0deg))
-        rotateY(var(--rotate-y, 0deg))
+    transform: rotateX(var(--rotate-plane-x, 0deg))
+        rotateY(var(--rotate-plane-y, 0deg))
         translateZ(calc(var(--block-size) / 2));
 }
 
@@ -18,27 +15,27 @@ section ul li {
 
 /* right */
 li:nth-child(2) {
-    --rotate-y: 90deg;
+    --rotate-plane-y: 90deg;
 }
 
 /* back */
 li:nth-child(3) {
-    --rotate-y: 180deg;
+    --rotate-plane-y: 180deg;
 }
 
 /* left */
 li:nth-child(4) {
-    --rotate-y: -90deg;
+    --rotate-plane-y: -90deg;
 }
 
 /* top */
 li:nth-child(5) {
-    --rotate-x: 90deg;
+    --rotate-plane-x: 90deg;
 }
 
 /* bottom */
 li:nth-child(6) {
-    --rotate-x: -90deg;
+    --rotate-plane-x: -90deg;
 }
 
 /* -------------------- Color each side -------------------- */
@@ -46,36 +43,11 @@ li:nth-child(6) {
 /* Red side */
 ul:nth-child(-n + 9) li:nth-child(1) {
     --color: var(--red);
-}
-
-/* Yellow side */
-ul:nth-child(3n + 14) li:nth-child(2),
-ul:nth-child(-3n + 12) li:nth-child(2) {
-    --color: var(--yellow);
-}
-
-/* Orange side */
-ul:nth-child(n + 18) li:nth-child(3) {
-    --color: var(--orange);
-}
-
-/* White side */
-ul:nth-child(-3n + 13) li:nth-child(4),
-ul:nth-child(3n + 15) li:nth-child(4) {
-    --color: var(--white);
-}
-
-/* Blue side */
-ul:nth-child(1) li:nth-child(5),
-ul:nth-child(2) li:nth-child(5),
-ul:nth-child(3) li:nth-child(5),
-ul:nth-child(10) li:nth-child(5),
-ul:nth-child(11) li:nth-child(5),
-ul:nth-child(12) li:nth-child(5),
-ul:nth-child(18) li:nth-child(5),
-ul:nth-child(19) li:nth-child(5),
-ul:nth-child(20) li:nth-child(5) {
-    --color: var(--blue);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: 0s;
 }
 
 /* Green side */
@@ -89,4 +61,59 @@ ul:nth-child(24) li:nth-child(6),
 ul:nth-child(25) li:nth-child(6),
 ul:nth-child(26) li:nth-child(6) {
     --color: var(--green);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -1.67s;
+}
+
+/* Orange side */
+ul:nth-child(n + 18) li:nth-child(3) {
+    --color: var(--orange);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -3.33s;
+}
+
+/* Blue side */
+ul:nth-child(1) li:nth-child(5),
+ul:nth-child(2) li:nth-child(5),
+ul:nth-child(3) li:nth-child(5),
+ul:nth-child(10) li:nth-child(5),
+ul:nth-child(11) li:nth-child(5),
+ul:nth-child(12) li:nth-child(5),
+ul:nth-child(18) li:nth-child(5),
+ul:nth-child(19) li:nth-child(5),
+ul:nth-child(20) li:nth-child(5) {
+    --color: var(--blue);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -5s;
+}
+
+/* Yellow side */
+ul:nth-child(3n + 14) li:nth-child(2),
+ul:nth-child(-3n + 12) li:nth-child(2) {
+    --color: var(--yellow);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -6.67s;
+}
+
+/* White side */
+ul:nth-child(-3n + 13) li:nth-child(4),
+ul:nth-child(3n + 15) li:nth-child(4) {
+    --color: var(--white);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -8.33s;
 }
