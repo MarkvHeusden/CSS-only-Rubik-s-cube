@@ -9,16 +9,6 @@ section ul li {
         var(--color) var(--radius),
         var(--black) var(--radius)
     );
-    /* --border: 5px;
-    background-image: repeating-linear-gradient(
-        blue 0 var(--border),
-        red var(--border) calc(var(--block-size) - var(--border))
-    ); */
-
-    /* --g: transparent 0 calc(var(--block-size) - 5px),
-        #fff 0 var(--block-size);
-    background: repeating-linear-gradient(to right, var(--g)),
-        repeating-linear-gradient(to bottom, var(--g)) red; */
     transform: rotateX(var(--rotate-x, 0deg))
         rotateY(var(--rotate-y, 0deg))
         translateZ(calc(var(--block-size) / 2));

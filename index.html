@@ -11,6 +11,7 @@
         <title>Rubik's cube</title>
     </head>
     <body>
+        <!-- Right menu -->
         <input type="radio" name="camera-side" checked id="side-1" />
         <input type="radio" name="camera-side" id="side-2" />
         <input type="radio" name="camera-side" id="side-3" />
@@ -29,8 +30,26 @@
             checked
         />
         <input type="radio" name="switch-colors" id="switch-psycho" />
+        <!-- Left menu -->
+        <input
+            type="radio"
+            name="rotate-direction"
+            checked
+            id="rotate-left"
+        />
+        <input
+            type="radio"
+            name="rotate-direction"
+            id="rotate-right"
+        />
+        <input type="radio" name="rotate-side" id="rotate-red" />
+        <input type="radio" name="rotate-side" id="rotate-green" />
+        <input type="radio" name="rotate-side" id="rotate-orange" />
+        <input type="radio" name="rotate-side" id="rotate-blue" />
+        <input type="radio" name="rotate-side" id="rotate-yellow" />
+        <input type="radio" name="rotate-side" id="rotate-white" />
         <nav>
-            <input type="checkbox" name="toggle-menu" />
+            <input type="checkbox" name="camera-menu" />
             <p>Side view</p>
             <ol>
                 <li><label for="side-1">1</label></li>
@@ -49,6 +68,25 @@
                 <li><label for="switch-psycho">Psycho</label></li>
             </ol>
         </nav>
+        <nav>
+            <input type="checkbox" name="rotate-menu" />
+            <p>Direction</p>
+            <ol>
+                <li><label for="rotate-left">Left</label></li>
+                <li><label for="rotate-right">Right</label></li>
+            </ol>
+            <p>Side</p>
+            <ol>
+                <li><label for="rotate-red">Red</label></li>
+                <li><label for="rotate-green">Green</label></li>
+                <li><label for="rotate-orange">Orange</label></li>
+                <li><label for="rotate-blue">Blue</label></li>
+                <li><label for="rotate-yellow">Yellow</label></li>
+                <li><label for="rotate-white">White</label></li>
+            </ol>
+        </nav>
+        <!-- div voor psycho achtergrond -->
+        <div></div>
         <main>
             <section>
                 <ul>

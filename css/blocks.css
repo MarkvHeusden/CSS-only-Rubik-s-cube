@@ -146,8 +146,3 @@ ul:nth-child(26) {
     --translate-y: var(--block-size);
     --translate-z: var(--block-size-n);
 }
-
-/* -------------------- Animations -------------------- */
-main:hover ul:nth-child(-n + 9) {
-    --rotate-z: -90deg;
-}
