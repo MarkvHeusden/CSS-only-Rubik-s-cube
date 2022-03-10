@@ -17,64 +17,26 @@ input[name='camera-menu'] ~ ol {
     opacity: 0;
 }
 
-/* -------------------- Camera angles top -------------------- */
-
-input:nth-of-type(1):checked
-    ~ input:nth-of-type(5):checked
-    ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(45deg);
+/* -------------------- Camera angles -------------------- */
+input:nth-of-type(1):checked ~ main section {
+    --rotate-x: 45deg;
+}
+input:nth-of-type(2):checked ~ main section {
+    --rotate-x: 135deg;
+}
+input:nth-of-type(3):checked ~ main section {
+    --rotate-x: 225deg;
+}
+input:nth-of-type(4):checked ~ main section {
+    --rotate-x: 315deg;
 }
 
-input:nth-of-type(2):checked
-    ~ input:nth-of-type(5):checked
-    ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(135deg);
+input:nth-of-type(5):checked ~ main section {
+    --rotate-cam-y: -30deg;
 }
 
-input:nth-of-type(3):checked
-    ~ input:nth-of-type(5):checked
-    ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(225deg);
-}
-
-input:nth-of-type(4):checked
-    ~ input:nth-of-type(5):checked
-    ~ main
-    section {
-    transform: rotateY(-30deg) rotateX(315deg);
-}
-
-/* -------------------- Camera angles bottom -------------------- */
-
-input:nth-of-type(1):checked
-    ~ input:nth-of-type(6):checked
-    ~ main
-    section {
-    transform: rotateY(30deg) rotateX(45deg);
-}
-
-input:nth-of-type(2):checked
-    ~ input:nth-of-type(6):checked
-    ~ main
-    section {
-    transform: rotateY(30deg) rotateX(135deg);
-}
-
-input:nth-of-type(3):checked
-    ~ input:nth-of-type(6):checked
-    ~ main
-    section {
-    transform: rotateY(30deg) rotateX(225deg);
-}
-
-input:nth-of-type(4):checked
-    ~ input:nth-of-type(6):checked
-    ~ main
-    section {
-    transform: rotateY(30deg) rotateX(315deg);
+input:nth-of-type(6):checked ~ main section {
+    --rotate-cam-y: 30deg;
 }
 
 /* -------------------- Psycho mode -------------------- */
@@ -90,7 +52,6 @@ input:nth-of-type(8):checked ~ div {
         transparent calc(100% - var(--ring-size) * 2),
         var(--black) calc(100% - var(--ring-size))
     );
-    /* transition: background-color 0.5s; */
     background-position: center center;
     width: 100vw;
     height: 100vh;
@@ -98,27 +59,13 @@ input:nth-of-type(8):checked ~ div {
 }
 
 input:nth-of-type(8):checked ~ main ul li {
-    /* Change colors to rgb values to add an alpha value in the gradient */
-    /* --red: 183 18 52;
-    --yellow: 255 213 0;
-    --orange: 255 88 0;
-    --white: 255 255 255;
-    --blue: 0 70 173;
-    --green: 0 155 72; */
-
     --ring-size: 0.4rem;
-    /* background-color: blue;
-    background-image: radial-gradient(
-        transparant var(--radius),
-        var(--black) var(--radius)
-    ); */
     background-image: repeating-radial-gradient(
         closest-side circle,
         #0000002d calc(100% - var(--ring-size) * 2),
         var(--black) calc(100% - var(--ring-size))
     );
     animation-name: rainbow, grow;
-    /* animation-name: cubeRainbow, grow; */
     animation-duration: 10s, 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -131,28 +78,6 @@ input:nth-of-type(8):checked ~ main ul li {
     100% {
         background-size: calc(100% + var(--ring-size) * 4)
             calc(100% + var(--ring-size) * 4);
-    }
-}
-
-@keyframes cubeRainbow {
-    100%,
-    0% {
-        background-color: var(--red);
-    }
-    16% {
-        background-color: var(--orange);
-    }
-    33% {
-        background-color: var(--yellow);
-    }
-    50% {
-        background-color: var(--green);
-    }
-    66% {
-        background-color: var(--blue);
-    }
-    83% {
-        background-color: var(--white);
     }
 }
 

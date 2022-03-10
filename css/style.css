@@ -4,8 +4,10 @@
 @import url(./blocks.css);
 @import url(./rotates.css);
 @import url(./camera.css);
+@import url(./button-cube.css);
 
 /* 
+- view knoppen kubus
 - interacties: top middle bottom ipv sides
 - background-clip voor 1 psycho kant
 - settings menu icon?

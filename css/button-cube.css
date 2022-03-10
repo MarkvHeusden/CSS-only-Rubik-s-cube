@@ -1,0 +1,88 @@
+/* -------------------- Cube button styling -------------------- */
+ol:first-of-type label {
+    perspective: 10rem;
+    height: 4rem;
+}
+
+ol:first-of-type ul {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: rotateX(var(--rotate-x, 0deg))
+        rotateY(var(--rotate-y, 0deg));
+}
+
+ol:first-of-type label li {
+    --mini-cube-size: 2rem;
+
+    width: var(--mini-cube-size);
+    height: var(--mini-cube-size);
+    /* background-color: var(--color); */
+    background-image: radial-gradient(
+        var(--color) calc(var(--mini-cube-size) / 1.7),
+        var(--black) calc(var(--mini-cube-size) / 1.7)
+    );
+    border: var(--black) solid 1.5px;
+    /* border-radius: 5px; */
+    position: absolute;
+    transform: rotateX(var(--rotate-plane-x, 0deg))
+        rotateY(var(--rotate-plane-y, 0deg))
+        translateZ(calc(var(--mini-cube-size) / 2));
+}
+
+/* -------------------- Cube button rotate & color planes -------------------- */
+
+label li:nth-child(1) {
+    --color: var(--red);
+}
+
+label li:nth-child(2) {
+    --color: var(--green);
+    --rotate-plane-y: 90deg;
+}
+label li:nth-child(3) {
+    --color: var(--orange);
+    --rotate-plane-y: 180deg;
+}
+label li:nth-child(4) {
+    --color: var(--blue);
+    --rotate-plane-y: -90deg;
+}
+label li:nth-child(5) {
+    --color: var(--yellow);
+    --rotate-plane-x: 90deg;
+}
+label li:nth-child(6) {
+    --color: var(--white);
+    --rotate-plane-x: -90deg;
+}
+
+/* -------------------- Cube button camera view -------------------- */
+
+ol:first-of-type li:nth-child(1) ul {
+    --rotate-y: -45deg;
+}
+
+ol:first-of-type li:nth-child(2) ul {
+    --rotate-y: -135deg;
+}
+
+ol:first-of-type li:nth-child(3) ul {
+    --rotate-y: -225deg;
+}
+
+ol:first-of-type li:nth-child(4) ul {
+    --rotate-y: -315deg;
+}
+
+/* Rotate view if top or bottom is selected */
+input:nth-of-type(5):checked ~ nav:first-of-type ul {
+    --rotate-x: -20deg;
+}
+input:nth-of-type(6):checked ~ nav:first-of-type ul {
+    --rotate-x: 20deg;
+}

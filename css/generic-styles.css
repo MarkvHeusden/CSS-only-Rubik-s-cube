@@ -12,9 +12,6 @@
     --blue: #0046ad;
     --green: #009b48;
     --black: #000;
-
-    /* --rainbow-speed: 10s; */
-    /* --ring-size: 0.6rem; */
 }
 
 *,
@@ -30,7 +27,6 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    /* background-color: var(--black); */
     background-image: radial-gradient(
         closest-side circle,
         rgb(0 0 0 / 0.7) 15%,
@@ -52,7 +48,7 @@ main {
     transform: rotateZ(-90deg);
 }
 
-div {
+body > div {
     display: none;
 }
 
@@ -64,4 +60,7 @@ section {
     transition: transform 1s;
     display: grid;
     place-items: center;
+    /* transform: rotateY(-30deg) rotateX(45deg); */
+    transform: rotateY(var(--rotate-cam-y, 0deg))
+        rotateX(var(--rotate-cam-x, 0deg));
 }

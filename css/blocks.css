@@ -1,4 +1,4 @@
-section ul {
+main ul {
     list-style-type: none;
     transform-style: preserve-3d;
     position: absolute;
@@ -13,135 +13,135 @@ section ul {
 }
 
 /* -------------------- Front-side (9 blocks) -------------------- */
-ul:nth-child(1) {
+main ul:nth-child(1) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(2) {
+main ul:nth-child(2) {
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(3) {
+main ul:nth-child(3) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(4) {
+main ul:nth-child(4) {
     --translate-x: var(--block-size-n);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(5) {
+main ul:nth-child(5) {
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(6) {
+main ul:nth-child(6) {
     --translate-x: var(--block-size);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(7) {
+main ul:nth-child(7) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(8) {
+main ul:nth-child(8) {
     --translate-y: var(--block-size);
     --translate-z: var(--block-size);
 }
 
-ul:nth-child(9) {
+main ul:nth-child(9) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size);
     --translate-z: var(--block-size);
 }
 
 /* -------------------- Middle-side (8 blocks) -------------------- */
-ul:nth-child(10) {
+main ul:nth-child(10) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size-n);
 }
 
-ul:nth-child(11) {
+main ul:nth-child(11) {
     --translate-y: var(--block-size-n);
 }
 
-ul:nth-child(12) {
+main ul:nth-child(12) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size-n);
 }
 
-ul:nth-child(13) {
+main ul:nth-child(13) {
     --translate-x: var(--block-size-n);
 }
 
-ul:nth-child(14) {
+main ul:nth-child(14) {
     --translate-x: var(--block-size);
 }
 
-ul:nth-child(15) {
+main ul:nth-child(15) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size);
 }
 
-ul:nth-child(16) {
+main ul:nth-child(16) {
     --translate-y: var(--block-size);
 }
 
-ul:nth-child(17) {
+main ul:nth-child(17) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size);
 }
 
 /* -------------------- Back-side (9 blocks) -------------------- */
-ul:nth-child(18) {
+main ul:nth-child(18) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(19) {
+main ul:nth-child(19) {
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(20) {
+main ul:nth-child(20) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size-n);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(21) {
+main ul:nth-child(21) {
     --translate-x: var(--block-size-n);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(22) {
+main ul:nth-child(22) {
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(23) {
+main ul:nth-child(23) {
     --translate-x: var(--block-size);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(24) {
+main ul:nth-child(24) {
     --translate-x: var(--block-size-n);
     --translate-y: var(--block-size);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(25) {
+main ul:nth-child(25) {
     --translate-y: var(--block-size);
     --translate-z: var(--block-size-n);
 }
 
-ul:nth-child(26) {
+main ul:nth-child(26) {
     --translate-x: var(--block-size);
     --translate-y: var(--block-size);
     --translate-z: var(--block-size-n);
