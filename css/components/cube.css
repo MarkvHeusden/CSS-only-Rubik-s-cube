@@ -1,0 +1,371 @@
+/* -------------------- Main cube Styling -------------------- */
+main {
+    perspective: 35rem;
+    width: var(--cube-size);
+    height: var(--cube-size);
+    transform: rotateZ(-90deg);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    display: grid;
+    place-items: center;
+    transform: rotateY(var(--rotate-cam-y, 0deg))
+        rotateX(var(--rotate-cam-x, 0deg));
+}
+
+main ul {
+    list-style-type: none;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: var(--block-size);
+    height: var(--block-size);
+    transition: transform 1.5s;
+    transform: rotateX(var(--rotate-x, 0deg))
+        rotateY(var(--rotate-y, 0deg)) rotateZ(var(--rotate-z, 0deg))
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        translateZ(var(--translate-z, 0));
+}
+
+/* -------------------- Front-side (9 blocks) -------------------- */
+main ul:nth-child(1) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(2) {
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(3) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(4) {
+    --translate-x: var(--block-size-n);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(5) {
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(6) {
+    --translate-x: var(--block-size);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(7) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(8) {
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size);
+}
+
+main ul:nth-child(9) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size);
+}
+
+/* -------------------- Middle-side (8 blocks) -------------------- */
+main ul:nth-child(10) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size-n);
+}
+
+main ul:nth-child(11) {
+    --translate-y: var(--block-size-n);
+}
+
+main ul:nth-child(12) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size-n);
+}
+
+main ul:nth-child(13) {
+    --translate-x: var(--block-size-n);
+}
+
+main ul:nth-child(14) {
+    --translate-x: var(--block-size);
+}
+
+main ul:nth-child(15) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size);
+}
+
+main ul:nth-child(16) {
+    --translate-y: var(--block-size);
+}
+
+main ul:nth-child(17) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size);
+}
+
+/* -------------------- Back-side (9 blocks) -------------------- */
+main ul:nth-child(18) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(19) {
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(20) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size-n);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(21) {
+    --translate-x: var(--block-size-n);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(22) {
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(23) {
+    --translate-x: var(--block-size);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(24) {
+    --translate-x: var(--block-size-n);
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(25) {
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size-n);
+}
+
+main ul:nth-child(26) {
+    --translate-x: var(--block-size);
+    --translate-y: var(--block-size);
+    --translate-z: var(--block-size-n);
+}
+
+/* -------------------- Individual cube blocks -------------------- */
+main ul li {
+    width: var(--block-size);
+    height: var(--block-size);
+    border: calc(var(--block-size) / 20) solid var(--black);
+    position: absolute;
+    background-color: var(--color, var(--black));
+    background-position: center;
+    transform: rotateX(var(--rotate-plane-x, 0deg))
+        rotateY(var(--rotate-plane-y, 0deg))
+        translateZ(calc(var(--block-size) / 2));
+}
+
+/* right */
+main li:nth-child(2) {
+    --rotate-plane-y: 90deg;
+}
+
+/* back */
+main li:nth-child(3) {
+    --rotate-plane-y: 180deg;
+}
+
+/* left */
+main li:nth-child(4) {
+    --rotate-plane-y: -90deg;
+}
+
+/* top */
+main li:nth-child(5) {
+    --rotate-plane-x: 90deg;
+}
+
+/* bottom */
+main li:nth-child(6) {
+    --rotate-plane-x: -90deg;
+}
+
+/* -------------------- Color each side -------------------- */
+
+/* Red side */
+main ul:nth-child(-n + 9) li:nth-child(1) {
+    --color: var(--red);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: 0s;
+}
+
+/* Green side */
+main ul:nth-child(7) li:nth-child(6),
+main ul:nth-child(8) li:nth-child(6),
+main ul:nth-child(9) li:nth-child(6),
+main ul:nth-child(15) li:nth-child(6),
+main ul:nth-child(16) li:nth-child(6),
+main ul:nth-child(17) li:nth-child(6),
+main ul:nth-child(24) li:nth-child(6),
+main ul:nth-child(25) li:nth-child(6),
+main ul:nth-child(26) li:nth-child(6) {
+    --color: var(--green);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -5s;
+}
+
+/* Orange side */
+main ul:nth-child(n + 18) li:nth-child(3) {
+    --color: var(--orange);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -1.67s;
+}
+
+/* Blue side */
+main ul:nth-child(1) li:nth-child(5),
+main ul:nth-child(2) li:nth-child(5),
+main ul:nth-child(3) li:nth-child(5),
+main ul:nth-child(10) li:nth-child(5),
+main ul:nth-child(11) li:nth-child(5),
+main ul:nth-child(12) li:nth-child(5),
+main ul:nth-child(18) li:nth-child(5),
+main ul:nth-child(19) li:nth-child(5),
+main ul:nth-child(20) li:nth-child(5) {
+    --color: var(--blue);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -3.33s;
+}
+
+/* Yellow side */
+main ul:nth-child(3n + 14) li:nth-child(2),
+main ul:nth-child(-3n + 12) li:nth-child(2) {
+    --color: var(--yellow);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -6.67s;
+}
+
+/* White side */
+main ul:nth-child(-3n + 13) li:nth-child(4),
+main ul:nth-child(3n + 15) li:nth-child(4) {
+    --color: var(--white);
+    background-image: radial-gradient(
+        transparent var(--radius),
+        var(--black) var(--radius)
+    );
+    animation-delay: -8.33s;
+}
+
+/* -------------------- Small cubes (buttons) styling -------------------- */
+nav:first-of-type ol:first-of-type label {
+    perspective: 10rem;
+    height: 4rem;
+}
+
+nav:first-of-type ol:first-of-type ul {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: rotateX(var(--rotate-x, 0deg))
+        rotateY(var(--rotate-y, 0deg));
+}
+
+nav:first-of-type ol:first-of-type label li {
+    --mini-cube-size: 2rem;
+
+    width: var(--mini-cube-size);
+    height: var(--mini-cube-size);
+    background-image: radial-gradient(
+        var(--color) calc(var(--mini-cube-size) / 1.7),
+        var(--black) calc(var(--mini-cube-size) / 1.7)
+    );
+    border: var(--black) solid 1.5px;
+    position: absolute;
+    transform: rotateX(var(--rotate-plane-x, 0deg))
+        rotateY(var(--rotate-plane-y, 0deg))
+        translateZ(calc(var(--mini-cube-size) / 2));
+}
+
+/* -------------------- Cube sides transform & color -------------------- */
+
+label li:nth-child(1) {
+    --color: var(--red);
+    animation-delay: 0s;
+}
+
+label li:nth-child(2) {
+    --color: var(--green);
+    --rotate-plane-y: 90deg;
+    animation-delay: -5s;
+}
+label li:nth-child(3) {
+    --color: var(--orange);
+    --rotate-plane-y: 180deg;
+    animation-delay: -1.67s;
+}
+label li:nth-child(4) {
+    --color: var(--blue);
+    --rotate-plane-y: -90deg;
+    animation-delay: -3.33s;
+}
+label li:nth-child(5) {
+    --color: var(--yellow);
+    --rotate-plane-x: 90deg;
+    animation-delay: -6.67s;
+}
+label li:nth-child(6) {
+    --color: var(--white);
+    --rotate-plane-x: -90deg;
+    animation-delay: -8.33s;
+}
+
+/* -------------------- Show correct angle for each button -------------------- */
+
+ol:first-of-type li:nth-child(1) ul {
+    --rotate-y: -45deg;
+}
+
+ol:first-of-type li:nth-child(2) ul {
+    --rotate-y: -135deg;
+}
+
+ol:first-of-type li:nth-child(3) ul {
+    --rotate-y: -225deg;
+}
+
+ol:first-of-type li:nth-child(4) ul {
+    --rotate-y: -315deg;
+}

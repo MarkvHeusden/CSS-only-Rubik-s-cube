@@ -1,14 +1,5 @@
-@import url(./generic-styles.css);
-@import url(./menus.css);
-@import url(./planes.css);
-@import url(./blocks.css);
-@import url(./rotates.css);
-@import url(./camera.css);
-@import url(./button-cube.css);
-
-/* 
-- view knoppen kubus
-- interacties: top middle bottom ipv sides
-- background-clip voor 1 psycho kant
-- settings menu icon?
- */
+@import url(./components/generic-styles.css);
+@import url(./components/cube.css);
+@import url(./components/menu.css);
+@import url(./components/inputs.css);
+@import url(./components/interactions.css);

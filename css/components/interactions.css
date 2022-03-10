@@ -1,38 +1,43 @@
-/* -------------------- Menu right -------------------- */
-nav:first-of-type {
-    inset: 2rem 2rem auto auto;
+/* -------------------- Rotations top -------------------- */
+
+/* left */
+input:nth-of-type(9):checked ~ main ul:nth-child(3n + 14),
+input:nth-of-type(9):checked ~ main ul:nth-child(-3n + 12) {
+    --rotate-x: -90deg;
 }
 
-input[name='camera-menu'] {
-    margin-left: auto;
+/* right */
+input:nth-of-type(11):checked ~ main ul:nth-child(3n + 14),
+input:nth-of-type(11):checked ~ main ul:nth-child(-3n + 12) {
+    --rotate-x: 90deg;
 }
 
-input[name='camera-menu']::after {
-    background-image: url(../img/camera.svg);
+/* -------------------- Rotations middle -------------------- */
+
+/* left */
+input:nth-of-type(12):checked ~ main ul:nth-child(3n + 16),
+input:nth-of-type(12):checked ~ main ul:nth-child(-3n + 11) {
+    --rotate-x: -90deg;
 }
 
-input[name='camera-menu'] ~ p,
-input[name='camera-menu'] ~ ol {
-    transform: translateX(20rem);
-    opacity: 0;
+/* right */
+input:nth-of-type(14):checked ~ main ul:nth-child(3n + 16),
+input:nth-of-type(14):checked ~ main ul:nth-child(-3n + 11) {
+    --rotate-x: 90deg;
 }
 
-/* -------------------- Psycho button -------------------- */
-label[for='switch-psycho'] {
-    --ring-size: 0.75rem;
-    background-image: repeating-radial-gradient(
-        closest-side circle,
-        transparent calc(100% - var(--ring-size) * 2),
-        var(--black) calc(100% - var(--ring-size))
-    );
-    background-position: center center;
-    animation: grow 4s linear infinite, rainbow 20s linear infinite;
-    color: var(--white);
+/* -------------------- Rotations bottom -------------------- */
+
+/* left */
+input:nth-of-type(15):checked ~ main ul:nth-child(-3n + 13),
+input:nth-of-type(15):checked ~ main ul:nth-child(3n + 15) {
+    --rotate-x: -90deg;
 }
 
-input:nth-of-type(8):checked ~ nav label[for='switch-psycho'] {
-    text-shadow: 0 0 5px rgb(0 0 0 / 65%);
-    animation-play-state: paused, running;
+/* right */
+input:nth-of-type(17):checked ~ main ul:nth-child(-3n + 13),
+input:nth-of-type(17):checked ~ main ul:nth-child(3n + 15) {
+    --rotate-x: 90deg;
 }
 
 /* -------------------- Camera angles -------------------- */
@@ -57,8 +62,17 @@ input:nth-of-type(6):checked ~ main section {
     --rotate-cam-y: 30deg;
 }
 
+/* Rotate cubes inside buttons if top or bottom is selected */
+input:nth-of-type(5):checked ~ nav:first-of-type ul {
+    --rotate-x: -20deg;
+}
+input:nth-of-type(6):checked ~ nav:first-of-type ul {
+    --rotate-x: 20deg;
+}
+
 /* -------------------- Psycho mode -------------------- */
 
+/* Background */
 input:nth-of-type(8):checked ~ div {
     --ring-size: 0.75rem;
 
@@ -76,10 +90,12 @@ input:nth-of-type(8):checked ~ div {
     animation: grow 1.2s linear infinite, rainbow 20s linear infinite;
 }
 
+/* Warp cube */
 input:nth-of-type(8):checked ~ main {
-    animation: skew 20s linear infinite;
+    animation: warp 20s linear infinite;
 }
 
+/* Animate cube blocks */
 input:nth-of-type(8):checked ~ main ul li {
     --ring-size: 0.4rem;
     background-image: repeating-radial-gradient(
@@ -94,17 +110,27 @@ input:nth-of-type(8):checked ~ main ul li {
     animation-direction: reverse, normal;
 }
 
+/* Animate small button cubes */
 input:nth-of-type(8):checked
     ~ nav:first-of-type
     ol:first-of-type
     label
     li {
-    background-image: none;
+    background-image: radial-gradient(
+        transparent calc(var(--mini-cube-size) / 1.7),
+        var(--black) calc(var(--mini-cube-size) / 1.7)
+    );
     animation-name: rainbow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: reverse, normal;
+}
+
+/* Animate psycho button */
+input:nth-of-type(8):checked ~ nav label[for='switch-psycho'] {
+    text-shadow: 0 0 5px rgb(0 0 0 / 65%);
+    animation-play-state: paused, running;
 }
 
 @keyframes grow {
@@ -117,7 +143,7 @@ input:nth-of-type(8):checked
     }
 }
 
-@keyframes skew {
+@keyframes warp {
     100%,
     0% {
         transform: rotateX(30deg) rotateY(0deg) rotateZ(-90deg);

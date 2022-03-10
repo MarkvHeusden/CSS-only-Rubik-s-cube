@@ -1,0 +1,115 @@
+/* -------------------- Menu styles -------------------- */
+nav {
+    width: 16rem;
+    position: absolute;
+    z-index: 1;
+}
+
+nav ol {
+    background-color: #00000080;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.5rem;
+    transition: transform 0.5s, opacity 0.5s;
+    padding: 0 1rem 1rem;
+}
+
+ol li {
+    display: inline;
+}
+
+p {
+    background-color: #00000080;
+    padding: 1.5em 1rem 0.5rem;
+    font-weight: bold;
+    transition: transform 0.5s, opacity 0.5s;
+    text-shadow: 0 0 5px rgb(0 0 0 / 35%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* -------------------- Menu left -------------------- */
+nav:last-of-type {
+    inset: 2rem auto auto 2rem;
+}
+
+nav:last-of-type ol {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Hide label text */
+nav:last-of-type label {
+    text-indent: -100000px;
+}
+
+/* Image on labels */
+nav:last-of-type li:nth-child(2n -1) label::after {
+    content: '';
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    transition: filter 0.3s;
+}
+
+nav:last-of-type li:first-child label::after {
+    background-image: url(../../img/rotate-left.svg);
+}
+
+nav:last-of-type li:last-child label::after {
+    background-image: url(../../img/rotate-right.svg);
+}
+
+input:nth-of-type(9):checked
+    ~ nav
+    label[for='rotate-top-left']::after,
+input:nth-of-type(11):checked
+    ~ nav
+    label[for='rotate-top-right']::after,
+input:nth-of-type(12):checked
+    ~ nav
+    label[for='rotate-middle-left']::after,
+input:nth-of-type(14):checked
+    ~ nav
+    label[for='rotate-middle-right']::after,
+input:nth-of-type(15):checked
+    ~ nav
+    label[for='rotate-bottom-left']::after,
+input:nth-of-type(17):checked
+    ~ nav
+    label[for='rotate-bottom-right']::after {
+    filter: invert(100%);
+}
+
+/* -------------------- Menu right -------------------- */
+nav:first-of-type {
+    inset: 2rem 2rem auto auto;
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media only screen and (max-width: 30rem) {
+    body nav:first-of-type {
+        inset: 1rem 1rem auto auto;
+        width: 9rem;
+    }
+
+    body nav:last-of-type {
+        inset: 1rem auto auto 1rem;
+        width: 14rem;
+    }
+
+    nav ol {
+        grid-template-columns: 1fr;
+    }
+    nav:last-of-type ol {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    p {
+        padding: 0 1rem 0.5rem;
+    }
+}
