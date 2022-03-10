@@ -36,27 +36,33 @@ nav:first-of-type ol:first-of-type label li {
 
 label li:nth-child(1) {
     --color: var(--red);
+    animation-delay: 0s;
 }
 
 label li:nth-child(2) {
     --color: var(--green);
     --rotate-plane-y: 90deg;
+    animation-delay: -5s;
 }
 label li:nth-child(3) {
     --color: var(--orange);
     --rotate-plane-y: 180deg;
+    animation-delay: -1.67s;
 }
 label li:nth-child(4) {
     --color: var(--blue);
     --rotate-plane-y: -90deg;
+    animation-delay: -3.33s;
 }
 label li:nth-child(5) {
     --color: var(--yellow);
     --rotate-plane-x: 90deg;
+    animation-delay: -6.67s;
 }
 label li:nth-child(6) {
     --color: var(--white);
     --rotate-plane-x: -90deg;
+    animation-delay: -8.33s;
 }
 
 /* -------------------- Cube button camera view -------------------- */

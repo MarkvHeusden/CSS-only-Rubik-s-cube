@@ -1,13 +1,8 @@
 /* -------------------- Menu styles -------------------- */
-
 nav {
     width: 16rem;
     position: absolute;
     z-index: 1;
-}
-
-nav:last-of-type {
-    width: 19rem;
 }
 
 nav ol {
@@ -46,9 +41,6 @@ label {
     z-index: 1;
     opacity: 1;
     position: relative;
-    /* background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center; */
 }
 
 p {
@@ -125,7 +117,6 @@ input:nth-of-type(4):checked ~ nav label[for='side-4'],
 input:nth-of-type(5):checked ~ nav label[for='camera-top'],
 input:nth-of-type(6):checked ~ nav label[for='camera-bottom'],
 input:nth-of-type(7):checked ~ nav label[for='switch-normal'],
-input:nth-of-type(8):checked ~ nav label[for='switch-psycho'],
 input:nth-of-type(9):checked ~ nav label[for='rotate-top-left'],
 input:nth-of-type(10):checked ~ nav label[for='rotate-top-none'],
 input:nth-of-type(11):checked ~ nav label[for='rotate-top-right'],
