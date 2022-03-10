@@ -1,5 +1,7 @@
 # CSS only Rubik's Cube
 
+![](./cube.png)
+
 # Wat ga ik maken?
 
 Ik heb gekozen om een 3D Rubrik's kubus te maken met CSS, zonder JavaScript of pre- en post-processors. Ook mogen er geen classes of id's gebruikt worden (met uitzondering van het gebruik om de :target selector te triggeren en om labels te koppelen aan inputs).
@@ -22,7 +24,7 @@ Hierdoor koos ik ervoor om deels opnieuw te beginnen. Ik ging elk blokje individ
 
 ## Week 3
 
-Ik week 3 kreeg ik corona en kon ik minder doen dan verwacht helaas. Wat ik wel heb gedaan is allereerst de code efficienter maken. Door middel van custom properties met een fallback value heb ik alle transforms op elke blokje met een stuk minder code kunnen schrijven. Ook heb ik de code voor het kleuren van de juistje vlakjes anders geschreven. Door wat complexere selectoren te gebruiken was een stuk minder code vereist. Hier zie je een voorbeeld:
+Ik week 3 kreeg ik corona en kon ik iets minder doen dan verwacht helaas. Wat ik wel heb gedaan is allereerst de code efficienter maken. Door middel van custom properties met een fallback value heb ik alle transforms op elke blokje met heel veel minder code kunnen schrijven. Ook heb ik de code voor het kleuren van de juistje vlakjes anders geschreven. Door wat complexere selectoren te gebruiken was een stuk minder code vereist. Hier zie je een voorbeeld:
 
 ```css
 /* Yellow side */
@@ -33,3 +35,11 @@ ul:nth-child(-3n + 12) li:nth-child(2) {
 ```
 
 Verder heb ik een toggle voor het camera menutje gemaakt. Zo kan je hem weergeven en verbergen wanneer je wil, wat vooral op mobiel wel handig kan zijn.
+
+## Week 4
+
+In deze week heb ik echt veel gedaan. Ik heb voor mijn gevoel nog veel kunnen maken waarvan ik niet zeker wist of ik genoeg tijd had, waardoor ik blij ben met het eindresultaat. Begin deze week zat namelijk alles tegen met het draaien van de kubus. Ik realiseerde met dat ik het niet ga halen om meerdere interacties te laten doen achter elkaar. Daardoor heb ik dit allemaal weggegooid en heb ik knoppen gemaakt voor 3 kanten die je op 3 manieren kan draaien. Dit is uiteindelijk wel gelukt en is naar mijn mening beter dan wanneer iets maar half werkt.
+
+Verder heb ik ook nog de buttons gestyled door bijvoorbeeld kleine kubusjes hierin te weergeven. Deze zijn ook interactief gemaakt, dus als je jouw camera view veranderd naar top of bottom, dan veranderen deze mini kubusjes mee. Ook gaan ze mee in de kleuren van de psycho modus, die ik ook heb uitgewerkt deze week. Ik was hier al een klein beetje aan begonnen, maar ik deze nu verbeterd met een achtergrond die mee animeert, de blokjes die nu ook van kleur veranderen (in aparte volgorde ipv hele kubus zelfde kleur) en de kubus die een beetje veranderd van vorm.
+
+Al met al ben ik blij met wat het is geworden. Ik heb ook nog genoeg dingen die er later aan toegevoegd kunnen worden, maar voor nu kan ik even geen kubus meer zien ;)
