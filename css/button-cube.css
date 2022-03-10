@@ -1,10 +1,10 @@
 /* -------------------- Cube button styling -------------------- */
-ol:first-of-type label {
+nav:first-of-type ol:first-of-type label {
     perspective: 10rem;
     height: 4rem;
 }
 
-ol:first-of-type ul {
+nav:first-of-type ol:first-of-type ul {
     display: grid;
     place-items: center;
     width: 100%;
@@ -16,18 +16,16 @@ ol:first-of-type ul {
         rotateY(var(--rotate-y, 0deg));
 }
 
-ol:first-of-type label li {
+nav:first-of-type ol:first-of-type label li {
     --mini-cube-size: 2rem;
 
     width: var(--mini-cube-size);
     height: var(--mini-cube-size);
-    /* background-color: var(--color); */
     background-image: radial-gradient(
         var(--color) calc(var(--mini-cube-size) / 1.7),
         var(--black) calc(var(--mini-cube-size) / 1.7)
     );
     border: var(--black) solid 1.5px;
-    /* border-radius: 5px; */
     position: absolute;
     transform: rotateX(var(--rotate-plane-x, 0deg))
         rotateY(var(--rotate-plane-y, 0deg))

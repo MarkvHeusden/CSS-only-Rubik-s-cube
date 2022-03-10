@@ -31,28 +31,19 @@
         />
         <input type="radio" name="switch-colors" id="switch-psycho" />
         <!-- Left menu -->
+        <input type="radio" name="rotate-top" id="rotate-top-left" />
         <input
             type="radio"
-            name="rotate-direction"
-            id="rotate-left"
-        />
-        <input
-            type="radio"
-            name="rotate-direction"
+            name="rotate-top"
             checked
-            id="rotate-right"
+            id="rotate-top-none"
         />
-        <input
-            type="radio"
-            name="rotate-side"
-            checked
-            id="rotate-red"
-        />
-        <input type="radio" name="rotate-side" id="rotate-green" />
+        <input type="radio" name="rotate-top" id="rotate-top-right" />
+        <!-- <input type="radio" name="rotate-side" id="rotate-green" />
         <input type="radio" name="rotate-side" id="rotate-orange" />
         <input type="radio" name="rotate-side" id="rotate-blue" />
         <input type="radio" name="rotate-side" id="rotate-yellow" />
-        <input type="radio" name="rotate-side" id="rotate-white" />
+        <input type="radio" name="rotate-side" id="rotate-white" /> -->
         <nav>
             <input type="checkbox" name="camera-menu" />
             <p>Side view</p>
@@ -116,20 +107,21 @@
         </nav>
         <nav>
             <input type="checkbox" name="rotate-menu" />
-            <p>Direction</p>
+            <p>Turn top</p>
             <ol>
-                <li><label for="rotate-left">Left</label></li>
-                <li><label for="rotate-right">None</label></li>
+                <li><label for="rotate-top-left">Left</label></li>
+                <li><label for="rotate-top-none">None</label></li>
+                <li><label for="rotate-top-right">Right</label></li>
             </ol>
-            <p>Turn side</p>
-            <ol>
+            <p>Turn middle</p>
+            <!-- <ol>
                 <li><label for="rotate-red">Red</label></li>
                 <li><label for="rotate-green">Green</label></li>
                 <li><label for="rotate-orange">Orange</label></li>
                 <li><label for="rotate-blue">Blue</label></li>
                 <li><label for="rotate-yellow">Yellow</label></li>
                 <li><label for="rotate-white">White</label></li>
-            </ol>
+            </ol> -->
         </nav>
         <!-- Psycho background div -->
         <div></div>

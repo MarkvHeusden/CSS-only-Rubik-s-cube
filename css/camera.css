@@ -19,16 +19,16 @@ input[name='camera-menu'] ~ ol {
 
 /* -------------------- Camera angles -------------------- */
 input:nth-of-type(1):checked ~ main section {
-    --rotate-x: 45deg;
+    --rotate-cam-x: 45deg;
 }
 input:nth-of-type(2):checked ~ main section {
-    --rotate-x: 135deg;
+    --rotate-cam-x: 135deg;
 }
 input:nth-of-type(3):checked ~ main section {
-    --rotate-x: 225deg;
+    --rotate-cam-x: 225deg;
 }
 input:nth-of-type(4):checked ~ main section {
-    --rotate-x: 315deg;
+    --rotate-cam-x: 315deg;
 }
 
 input:nth-of-type(5):checked ~ main section {
