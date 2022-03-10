@@ -146,16 +146,16 @@ input:nth-of-type(8):checked ~ nav label[for='switch-psycho'] {
 @keyframes warp {
     100%,
     0% {
-        transform: rotateX(30deg) rotateY(0deg) rotateZ(-90deg);
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(-90deg);
     }
     25% {
-        transform: rotateX(0deg) rotateY(10deg) rotateZ(-90deg);
+        transform: rotateX(30deg) rotateY(10deg) rotateZ(-90deg);
     }
     50% {
-        transform: rotateX(30deg) rotateY(0deg) rotateZ(-90deg);
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(-90deg);
     }
     75% {
-        transform: rotateX(0deg) rotateY(-10deg) rotateZ(-90deg);
+        transform: rotateX(30deg) rotateY(-10deg) rotateZ(-90deg);
     }
 }
 
