@@ -55,7 +55,7 @@ input:nth-of-type(8):checked ~ div {
     background-position: center center;
     width: 100vw;
     height: 100vh;
-    animation: grow 1.2s linear infinite, rainbow 10s linear infinite;
+    animation: grow 1.2s linear infinite, rainbow 20s linear infinite;
 }
 
 input:nth-of-type(8):checked ~ main ul li {
@@ -69,6 +69,7 @@ input:nth-of-type(8):checked ~ main ul li {
     animation-duration: 10s, 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-direction: reverse, normal;
 }
 
 @keyframes grow {

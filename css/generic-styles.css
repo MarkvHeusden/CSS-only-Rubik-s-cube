@@ -60,7 +60,6 @@ section {
     transition: transform 1s;
     display: grid;
     place-items: center;
-    /* transform: rotateY(-30deg) rotateX(45deg); */
     transform: rotateY(var(--rotate-cam-y, 0deg))
         rotateX(var(--rotate-cam-x, 0deg));
 }

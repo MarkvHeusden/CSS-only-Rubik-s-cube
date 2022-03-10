@@ -39,12 +39,16 @@ label {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
     font-family: sans-serif;
     border-radius: 0.2rem;
     display: block;
     z-index: 1;
-    /* pointer-events: all; */
+    opacity: 1;
+    position: relative;
+    /* background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center; */
 }
 
 p {
@@ -96,7 +100,8 @@ input[type='checkbox']:checked:after {
     filter: invert(100%);
 }
 
-input[type='checkbox']:hover {
+input:hover,
+label:hover {
     opacity: 0.8;
 }
 
@@ -112,7 +117,7 @@ input[type='checkbox']:checked ~ ol {
 
 /* -------------------- Active & hover states labels -------------------- */
 
-label:hover,
+/* label:hover, */
 input:nth-of-type(1):checked ~ nav label[for='side-1'],
 input:nth-of-type(2):checked ~ nav label[for='side-2'],
 input:nth-of-type(3):checked ~ nav label[for='side-3'],
@@ -123,32 +128,33 @@ input:nth-of-type(7):checked ~ nav label[for='switch-normal'],
 input:nth-of-type(8):checked ~ nav label[for='switch-psycho'],
 input:nth-of-type(9):checked ~ nav label[for='rotate-top-left'],
 input:nth-of-type(10):checked ~ nav label[for='rotate-top-none'],
-input:nth-of-type(11):checked ~ nav label[for='rotate-top-rigth'] {
+input:nth-of-type(11):checked ~ nav label[for='rotate-top-right'],
+input:nth-of-type(12):checked ~ nav label[for='rotate-middle-left'],
+input:nth-of-type(13):checked ~ nav label[for='rotate-middle-none'],
+input:nth-of-type(14):checked ~ nav label[for='rotate-middle-right'],
+input:nth-of-type(15):checked ~ nav label[for='rotate-bottom-left'],
+input:nth-of-type(16):checked ~ nav label[for='rotate-bottom-none'],
+input:nth-of-type(17):checked ~ nav label[for='rotate-bottom-right'] {
     background-color: var(--white);
     color: var(--black);
 }
 
-/* ,
-input:nth-of-type(12):checked ~ nav label[for='rotate-green'],
-input:nth-of-type(13):checked ~ nav label[for='rotate-orange'],
-input:nth-of-type(14):checked ~ nav label[for='rotate-blue'],
-input:nth-of-type(15):checked ~ nav label[for='rotate-yellow'],
-input:nth-of-type(16):checked ~ nav label[for='rotate-white'] */
-
 @media only screen and (max-width: 30rem) {
     body nav:first-of-type {
         inset: 1rem 1rem auto auto;
+        width: 9rem;
     }
+
     body nav:last-of-type {
         inset: 1rem auto auto 1rem;
+        width: 14rem;
     }
-    nav,
-    nav:last-of-type {
-        width: 10rem;
-    }
-    nav ol,
-    nav:last-of-type ol {
+
+    nav ol {
         grid-template-columns: 1fr;
+    }
+    nav:last-of-type ol {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     p {
