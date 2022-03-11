@@ -98,7 +98,7 @@ input:nth-of-type(8):checked ~ main {
 /* Animate cube blocks */
 input:nth-of-type(8):checked ~ main ul li {
     --ring-size: 0.4rem;
-    background-image: repeating-radial-gradient(
+    --gradient: repeating-radial-gradient(
         closest-side circle,
         #0000002d calc(100% - var(--ring-size) * 2),
         var(--black) calc(100% - var(--ring-size))

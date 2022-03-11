@@ -173,7 +173,7 @@ main ul li {
     height: var(--block-size);
     border: calc(var(--block-size) / 20) solid var(--black);
     position: absolute;
-    background-color: var(--color, var(--black));
+    background-color: var(--black);
     background-position: center;
     transform: rotateX(var(--rotate-plane-x, 0deg))
         rotateY(var(--rotate-plane-y, 0deg))
@@ -210,10 +210,11 @@ main li:nth-child(6) {
 /* Red side */
 main ul:nth-child(-n + 9) li:nth-child(1) {
     --color: var(--red);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: 0s;
 }
 
@@ -228,20 +229,22 @@ main ul:nth-child(24) li:nth-child(6),
 main ul:nth-child(25) li:nth-child(6),
 main ul:nth-child(26) li:nth-child(6) {
     --color: var(--green);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: -5s;
 }
 
 /* Orange side */
 main ul:nth-child(n + 18) li:nth-child(3) {
     --color: var(--orange);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: -1.67s;
 }
 
@@ -256,10 +259,11 @@ main ul:nth-child(18) li:nth-child(5),
 main ul:nth-child(19) li:nth-child(5),
 main ul:nth-child(20) li:nth-child(5) {
     --color: var(--blue);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: -3.33s;
 }
 
@@ -267,10 +271,11 @@ main ul:nth-child(20) li:nth-child(5) {
 main ul:nth-child(3n + 14) li:nth-child(2),
 main ul:nth-child(-3n + 12) li:nth-child(2) {
     --color: var(--yellow);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: -6.67s;
 }
 
@@ -278,10 +283,11 @@ main ul:nth-child(-3n + 12) li:nth-child(2) {
 main ul:nth-child(-3n + 13) li:nth-child(4),
 main ul:nth-child(3n + 15) li:nth-child(4) {
     --color: var(--white);
-    background-image: radial-gradient(
-        transparent var(--radius),
+    --gradient: radial-gradient(
+        var(--color) var(--radius),
         var(--black) var(--radius)
     );
+    background-image: var(--gradient);
     animation-delay: -8.33s;
 }
 
