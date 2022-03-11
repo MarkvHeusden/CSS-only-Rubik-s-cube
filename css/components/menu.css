@@ -63,27 +63,6 @@ nav:last-of-type li:last-child label::after {
     background-image: url(../../img/rotate-right.svg);
 }
 
-input:nth-of-type(9):checked
-    ~ nav
-    label[for='rotate-top-left']::after,
-input:nth-of-type(11):checked
-    ~ nav
-    label[for='rotate-top-right']::after,
-input:nth-of-type(12):checked
-    ~ nav
-    label[for='rotate-middle-left']::after,
-input:nth-of-type(14):checked
-    ~ nav
-    label[for='rotate-middle-right']::after,
-input:nth-of-type(15):checked
-    ~ nav
-    label[for='rotate-bottom-left']::after,
-input:nth-of-type(17):checked
-    ~ nav
-    label[for='rotate-bottom-right']::after {
-    filter: invert(100%);
-}
-
 /* -------------------- Menu right -------------------- */
 nav:first-of-type {
     inset: 2rem 2rem auto auto;
