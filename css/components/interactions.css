@@ -116,15 +116,11 @@ input:nth-of-type(8):checked
     menu:first-of-type
     label
     li {
-    background-image: radial-gradient(
-        transparent calc(var(--mini-cube-size) / 1.7),
-        var(--black) calc(var(--mini-cube-size) / 1.7)
-    );
     animation-name: rainbow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: reverse, normal;
+    animation-direction: reverse;
 }
 
 /* Animate psycho button */
