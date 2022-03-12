@@ -58,7 +58,7 @@ input[type='checkbox']::after {
 }
 
 input[type='checkbox']:checked ~ p,
-input[type='checkbox']:checked ~ ol {
+input[type='checkbox']:checked ~ menu {
     transform: translateX(0);
     opacity: 1;
 }
@@ -70,7 +70,7 @@ input[name='rotate-menu']::after {
 }
 
 input[name='rotate-menu'] ~ p,
-input[name='rotate-menu'] ~ ol {
+input[name='rotate-menu'] ~ menu {
     transform: translateX(-20rem);
     opacity: 0;
 }
@@ -85,7 +85,7 @@ input[name='camera-menu']::after {
 }
 
 input[name='camera-menu'] ~ p,
-input[name='camera-menu'] ~ ol {
+input[name='camera-menu'] ~ menu {
     transform: translateX(20rem);
     opacity: 0;
 }

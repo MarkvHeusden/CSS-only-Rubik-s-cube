@@ -292,12 +292,12 @@ main ul:nth-child(3n + 15) li:nth-child(4) {
 }
 
 /* -------------------- Small cubes (buttons) styling -------------------- */
-nav:first-of-type ol:first-of-type label {
+nav:first-of-type menu:first-of-type label {
     perspective: 10rem;
     height: 4rem;
 }
 
-nav:first-of-type ol:first-of-type ul {
+nav:first-of-type menu:first-of-type ul {
     display: grid;
     place-items: center;
     width: 100%;
@@ -309,7 +309,7 @@ nav:first-of-type ol:first-of-type ul {
         rotateY(var(--rotate-y, 0deg));
 }
 
-nav:first-of-type ol:first-of-type label li {
+nav:first-of-type menu:first-of-type label li {
     --mini-cube-size: 2rem;
 
     width: var(--mini-cube-size);
@@ -360,18 +360,18 @@ label li:nth-child(6) {
 
 /* -------------------- Show correct angle for each button -------------------- */
 
-ol:first-of-type li:nth-child(1) ul {
+menu:first-of-type li:nth-child(1) ul {
     --rotate-y: -45deg;
 }
 
-ol:first-of-type li:nth-child(2) ul {
+menu:first-of-type li:nth-child(2) ul {
     --rotate-y: -135deg;
 }
 
-ol:first-of-type li:nth-child(3) ul {
+menu:first-of-type li:nth-child(3) ul {
     --rotate-y: -225deg;
 }
 
-ol:first-of-type li:nth-child(4) ul {
+menu:first-of-type li:nth-child(4) ul {
     --rotate-y: -315deg;
 }

@@ -5,7 +5,7 @@ nav {
     z-index: 1;
 }
 
-nav ol {
+nav menu {
     background-color: #00000080;
     list-style-type: none;
     display: grid;
@@ -16,7 +16,7 @@ nav ol {
     padding: 0 1rem 1rem;
 }
 
-ol li {
+menu li {
     display: inline;
 }
 
@@ -35,7 +35,7 @@ nav:last-of-type {
     inset: 2rem auto auto 2rem;
 }
 
-nav:last-of-type ol {
+nav:last-of-type menu {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -81,10 +81,10 @@ nav:first-of-type {
         width: 14rem;
     }
 
-    nav ol {
+    nav menu {
         grid-template-columns: 1fr;
     }
-    nav:last-of-type ol {
+    nav:last-of-type menu {
         grid-template-columns: 1fr 1fr 1fr;
     }
 

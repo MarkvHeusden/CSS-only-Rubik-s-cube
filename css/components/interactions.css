@@ -113,7 +113,7 @@ input:nth-of-type(8):checked ~ main ul li {
 /* Animate small button cubes */
 input:nth-of-type(8):checked
     ~ nav:first-of-type
-    ol:first-of-type
+    menu:first-of-type
     label
     li {
     background-image: radial-gradient(
