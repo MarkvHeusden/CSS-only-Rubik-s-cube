@@ -3,7 +3,6 @@ main {
     perspective: 60rem;
     width: var(--cube-size);
     height: var(--cube-size);
-    /* aspect-ratio: 1; */
     transform: rotateZ(-90deg);
 }
 
@@ -24,7 +23,7 @@ main ul {
     transform-style: preserve-3d;
     position: absolute;
     width: var(--block-size);
-    aspect-ratio: 1;
+    height: var(--block-size);
     transition: transform 1.5s;
     transform: rotateX(var(--rotate-x, 0deg))
         rotateY(var(--rotate-y, 0deg)) rotateZ(var(--rotate-z, 0deg))
@@ -321,7 +320,7 @@ nav:first-of-type menu:first-of-type label li {
     --mini-cube-border: calc(var(--mini-cube-size) / 30);
 
     width: var(--mini-cube-size);
-    aspect-ratio: 1;
+    height: var(--mini-cube-size);
     background-color: var(--color);
     background-image: linear-gradient(
             to right,
