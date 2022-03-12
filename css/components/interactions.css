@@ -118,6 +118,16 @@ input:nth-of-type(8):checked
     menu:first-of-type
     label
     li {
+    background-image: linear-gradient(
+            to right,
+            var(--black) var(--mini-cube-border),
+            #0000002d var(--mini-cube-border)
+        ),
+        linear-gradient(
+            to bottom,
+            var(--black) var(--mini-cube-border),
+            #0000002d var(--mini-cube-border)
+        );
     animation-name: rainbow;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -127,7 +137,6 @@ input:nth-of-type(8):checked
 
 /* Animate psycho button */
 input:nth-of-type(8):checked ~ nav label[for='switch-psycho'] {
-    text-shadow: 0 0 5px rgb(0 0 0 / 65%);
     animation-play-state: paused, running;
 }
 
