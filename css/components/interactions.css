@@ -103,7 +103,9 @@ input:nth-of-type(8):checked ~ main ul li {
         #0000002d calc(100% - var(--ring-size) * 2),
         var(--black) calc(100% - var(--ring-size))
     );
-    animation-name: rainbow, grow;
+
+    /* Only add animation to visible sides, leave inside black */
+    --animation-name: rainbow, grow;
     animation-duration: 10s, 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;

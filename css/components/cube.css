@@ -215,6 +215,7 @@ main ul:nth-child(-n + 9) li:nth-child(1) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: 0s;
 }
 
@@ -234,6 +235,7 @@ main ul:nth-child(26) li:nth-child(6) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: -5s;
 }
 
@@ -245,6 +247,7 @@ main ul:nth-child(n + 18) li:nth-child(3) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: -1.67s;
 }
 
@@ -264,6 +267,7 @@ main ul:nth-child(20) li:nth-child(5) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: -3.33s;
 }
 
@@ -276,6 +280,7 @@ main ul:nth-child(-3n + 12) li:nth-child(2) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: -6.67s;
 }
 
@@ -288,6 +293,7 @@ main ul:nth-child(3n + 15) li:nth-child(4) {
         var(--black) var(--radius)
     );
     background-image: var(--gradient);
+    animation-name: var(--animation-name);
     animation-delay: -8.33s;
 }
 
